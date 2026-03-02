@@ -1,0 +1,11 @@
+{
+    "BASELINE_EXCEL": "PC_Prod_Exception_Monitoring_R02_2026-DT 2.xlsx",
+    "DATA_DIR": "data",
+    "DELAY_MINUTES": 30,
+    "ENABLE_NOTIFICATIONS": true,
+    "INPUT_CSV": "table-data (2).csv",
+    "MANUAL_MODE": true,
+    "SECOND_INPUT_CSV": "table-data (2) - run2.csv",
+    "TEAMS_WEBHOOK_URL": "https://capgemini.webhook.office.com/webhookb2/677deb7d-c521-4449-bf96-bb25fa65a624@76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61/IncomingWebhook/a6fc02a9ba094949836d97fec3fbf555/eb0bffae-33a6-401c-92d6-1f870175be1b/V29ffMgfXDbKdcnD7IZwbV_fsm9bENCGnzYlnO1zLNtKI1",
+    "TEMPLATES_DIR": "templates"
+}

@@ -1,0 +1,156 @@
+Call with EZAZ AHAMED, SK-20260217_220922-Meeting 
+Recording 
+17 February 2026, 04:39pm 
+8m 23s 
+Shanmuga Srikanth, M.S.S. Srikanth started transcription 
+EZAZ AHAMED, SK   0:03 
+Yeah, there was already the we need to create this base sheet every month when we 
+have a major deployment at that time. 
+Shanmuga Srikanth, M.S.S. Srikanth   0:18 
+Oh, we have to create this Excel sheet. 
+EZAZ AHAMED, SK   0:22 
+Yes, what? 
+Shanmuga Srikanth, M.S.S. Srikanth   0:23 
+Uh, should I create the text and sheet or is it generated with the some operations? 
+EZAZ AHAMED, SK   0:29 
+No, we need to uh extract the files uh on every every month. 
+Major deployment when the major deployment was went at that time. 
+Shanmuga Srikanth, M.S.S. Srikanth   0:44 
+Mhm. 
+EZAZ AHAMED, SK   0:46 
+We have here and they had. 
+The release monitoring in the dynetries. From there we need to take that file. Now I 
+am showing that like how we are doing the text trips and monitoring right. 
+It's in monitoring. 
+OK, I'm doing for now for one hour. Actually we're doing when we needed we're 
+doing 30 minutes. Now I'm showing you in one hour. 
+Shanmuga Srikanth, M.S.S. Srikanth   1:21 
+Mhm. 
+OK. 
+EZAZ AHAMED, SK   1:29 
+Just I need to run this query. 
+Shanmuga Srikanth, M.S.S. Srikanth   1:32 
+OK. 
+EZAZ AHAMED, SK   1:33 
+I got 154 records. 
+Shanmuga Srikanth, M.S.S. Srikanth   1:36 
+OK. 
+EZAZ AHAMED, SK   1:38 
+That I need to download in CSV after that. 
+To copy these things and. 
+Paste over that basic file. 
+Once we paste, we'll get that there was new exception or. 
+Old. If it is OK then it is OK. If new then you need to check right? This one is new. 
+Shanmuga Srikanth, M.S.S. Srikanth   2:09 
+OK. 
+Mhm. 
+EZAZ AHAMED, SK   2:13 
+This one is new. I need to check this one. 
+Shanmuga Srikanth, M.S.S. Srikanth   2:19 
+So last week average category review comments, all of these are like they are already 
+present in the Excel sheet and this two columns A&B column that we are copying 
+and pasting. 
+EZAZ AHAMED, SK   2:27 
+Yeah, that that, yes, that in 30 days baseline was we are fetched on that the exception 
+when we are the major deployment was going at that time we are fetching the 30 
+days data. 
+Like we pitch in this month. 
+On fetch till 13 and in next month we need to fetch from 14 to I think the second 
+weekend was here but means. 
+Shanmuga Srikanth, M.S.S. Srikanth   3:05 
+13 MM. 
+EZAZ AHAMED, SK   3:05 
+Next 13, Next 13. 
+OK, we got that this thing. 
+Need to. 
+Copy e-message non place section ordered. Need to check this one into this. 
+We have already had a comment. 
+Query to check whether we get this exception in last 30 days or not. So I am 
+checking for last 30 days only. 
+Today only will face this. 
+Because I think the name was there. 
+Adrin Adrin Miley. 
+Shanmuga Srikanth, M.S.S. Srikanth   4:09 
+Mhm. 
+EZAZ AHAMED, SK   4:10 
+Right, I think this is the name. If we got like that name then we no need to worry 
+about this. If the there was a great to a new exception then we need to inform that 
+there. 
+Was we get a new exception. Please look into this and they will create. They will L2 
+team and others will work on this. OK once again. 
+4:37 
+OK. 
+EZAZ AHAMED, SK   4:40 
+Giving this only. 
+Yeah, the that one was due to the name was there. That's why we're getting this 
+exception. 
+Shanmuga Srikanth, M.S.S. Srikanth   4:53 
+OK. 
+EZAZ AHAMED, SK   4:54 
+Yeah, this one is adding mainly is the name. That's why we're getting this. The rest of 
+all we need to check once if we get elevated. Elevated one is also we need to check if 
+there was high much of count. 
+Shanmuga Srikanth, M.S.S. Srikanth   4:57 
+Mhm, mhm. 
+EZAZ AHAMED, SK   5:12 
+19. 
+Shanmuga Srikanth, M.S.S. Srikanth   5:12 
+OK. 
+EZAZ AHAMED, SK   5:22 
+Need need to read verify that the count is normal or high. If the count was high then 
+we need to inform that one too. 
+Yeah, it's intent. It was high. We need to inform that, but today 133, it's OK. 
+Like that elevated. This one is also elevated. 
+Yeah, I read book code. 
+Shanmuga Srikanth, M.S.S. Srikanth   6:08 
+So we need to monitor for elevated and also whatever a new it is popping OK. 
+EZAZ AHAMED, SK   6:12 
+Yes, yes, elevated and new. If elevated was if the count was increasing then then we 
+also have to inform that one. 
+Shanmuga Srikanth, M.S.S. Srikanth   6:26 
+OK, so we are checking for every week for 10/2/10/2026 it is 4 and for 2/17/2026 it is 
+8. 
+EZAZ AHAMED, SK   6:35 
+Yes. 
+We need to check it every 30 minutes. 
+Whenever the deployment was there, then we need to check and every 30 minutes 
+or all in the rest of the days we need to check every one hour. 
+Shanmuga Srikanth, M.S.S. Srikanth   6:58 
+OK. 
+EZAZ AHAMED, SK   7:09 
+Is it OK for you? 
+Is the. 
+Shanmuga Srikanth, M.S.S. Srikanth   7:12 
+Yes, yes, sounds like we gotten like understood how the user interface is operating. 
+So if you want to automate, so is there any tech stack which are which we are 
+supposed to use like mandatory tech stack? 
+EZAZ AHAMED, SK   7:19 
+Yes. 
+Select. 
+Shanmuga Srikanth, M.S.S. Srikanth   7:30 
+Uh, for automation purpose. 
+EZAZ AHAMED, SK   7:32 
+Yes. 
+Shanmuga Srikanth, M.S.S. Srikanth   7:33 
+So are you guys thinking of any particular tech stack like we want to use this tech 
+stack technology stacker to automate this or is it OK if? 
+EZAZ AHAMED, SK   7:40 
+Um. 
+Either or whatever you are saying, OK, that is OK for us. 
+Shanmuga Srikanth, M.S.S. Srikanth   7:49 
+OK, so we were thinking of using a power automate, so I want to know like if that is if 
+we are OK to use that. 
+EZAZ AHAMED, SK   7:52 
+No. 
+Yeah, that's OK. 
+Shanmuga Srikanth, M.S.S. Srikanth   8:02 
+OK. OK. Then we will review this like we have recorded it, right. So we'll review this 
+and we'll understand it better and then we'll come back and we'll ask if we have any 
+other doubts. 
+EZAZ AHAMED, SK   8:15 
+Oh, yes, sure. 
+Shanmuga Srikanth, M.S.S. Srikanth   8:17 
+OK. Uh, thank you, Isas. 
+EZAZ AHAMED, SK   8:19 
+Thank you, Srikanth. 
+Shanmuga Srikanth, M.S.S. Srikanth stopped transcription 

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Monitor | Tech-Scale Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f2fe;
+            --secondary: #4facfe;
+            --bg-dark: #020617;
+            --card-bg: rgba(15, 23, 42, 0.7);
+            --border-glow: rgba(0, 242, 254, 0.2);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --surface: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(79, 172, 254, 0.05) 0%, transparent 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 2.5rem;
+        }
+
+        /* Glassmorphism utility */
+        .glass {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .logo-section h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .logo-section p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        /* Status Badge Animation */
+        .status-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 1.25rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .pinger {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #94a3b8;
+        }
+
+        .running .pinger {
+            background: var(--warning);
+            box-shadow: 0 0 12px var(--warning);
+            animation: pulse 1.5s infinite;
+        }
+
+        .completed .pinger {
+            background: var(--success);
+        }
+
+        .error .pinger {
+            background: var(--error);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+            }
+        }
+
+        /* Cards */
+        .section-card {
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        /* Buttons */
+        .btn {
+            font-family: inherit;
+            font-weight: 700;
+            padding: 0.8rem 1.8rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .btn-glow {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--bg-dark);
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-glow);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 242, 254, 0.1);
+        }
+
+        /* Log Terminal */
+        .terminal-container {
+            background: #020617;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            font-family: 'JetBrains Mono', monospace;
+            height: 520px;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .terminal-line {
+            padding: 0.2rem 0;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeIn 0.3s forwards;
+        }
+
+        .line-ts {
+            color: var(--text-dim);
+            min-width: 80px;
+        }
+
+        .line-content {
+            flex: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Form Controls */
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .fancy-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.6rem;
+            padding: 0.8rem 1rem;
+            color: var(--text-main);
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .fancy-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        input[type="file"]::file-selector-button {
+            background: var(--surface);
+            color: var(--primary);
+            border: 1px solid var(--border-glow);
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.4rem;
+            font-weight: 600;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        /* Manual Mode Overlay */
+        .wait-overlay {
+            margin-top: 1.5rem;
+            padding: 2rem;
+            border-radius: 1.25rem;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            text-align: center;
+        }
+
+        .wait-overlay h3 {
+            color: var(--warning);
+            margin-bottom: 0.75rem;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <h1>MONITORING ENGINE</h1>
+                <p>Exception Monitoring & Triage Dashboard</p>
+            </div>
+            <div id="statusContainer" class="status-pill idle">
+                <span class="pinger"></span>
+                <span id="statusLabel">SYSTEM IDLE</span>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <section>
+                <div class="section-card glass">
+                    <div class="card-title">
+                        <h2>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                            Execution Logs
+                        </h2>
+                        <button id="runBtn" class="btn btn-glow" onclick="runMonitoring()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            START MONITORING
+                        </button>
+                    </div>
+
+                    <div id="logs" class="terminal-container">
+                        <div class="terminal-line"><span class="line-content">Ready for operations...</span></div>
+                    </div>
+
+                    <div id="waitMsg" class="wait-overlay" style="display:none;">
+                        <h3>ACTION REQUIRED</h3>
+                        <p id="promptText" style="margin-bottom: 1.5rem; color: var(--text-dim);"></p>
+                        <div style="display:flex; flex-direction:column; gap:1rem; align-items:center;">
+                            <input type="file" id="manualUpload" class="fancy-input" style="max-width: 300px;">
+                            <button class="btn btn-glow" onclick="uploadAndResume()">UPLOAD & RESUME</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                <div class="section-card glass">
+                    <div class="card-title">
+                        <h2>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                                </path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            Quick Config
+                        </h2>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Cycle 1 Source (CSV)</label>
+                        <input type="file" id="cycle1File" class="fancy-input"
+                            style="padding: 0.5rem; font-size: 0.75rem;">
+                        <button class="btn btn-outline" style="width: 100%; margin-top: 0.75rem; padding: 0.5rem;"
+                            onclick="uploadFile('cycle1File', 'INPUT_CSV')">UPLOAD SOURCE</button>
+                    </div>
+
+                    <div style="height: 1px; background: rgba(255,255,255,0.05); margin: 2rem 0;"></div>
+
+                    <div class="input-group">
+                        <label>MS Teams Webhook</label>
+                        <input type="text" id="webhook" readonly class="fancy-input"
+                            style="opacity: 0.5; cursor: not-allowed; font-size: 0.7rem;">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Verification Delay (Min)</label>
+                        <input type="number" id="delay" class="fancy-input">
+                    </div>
+
+                    <div class="input-group" style="display:flex; align-items:center; gap:0.75rem;">
+                        <input type="checkbox" id="notif" style="width:1.2rem; height:1.2rem; cursor:pointer;">
+                        <label style="margin:0;">Enable Alerts</label>
+                    </div>
+
+                    <button class="btn btn-glow" style="width: 100%; margin-top: 1rem; justify-content: center;"
+                        onclick="saveConfig()">
+                        APPLY SETTINGS
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+        let currentConfig = {};
+        const logsContainer = document.getElementById('logs');
+
+        function appendLog(message) {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString([], { hour12: false });
+            const line = document.createElement('div');
+            line.className = 'terminal-line';
+            line.innerHTML = `<span class="line-ts">[${timeStr}]</span><span class="line-content">${message}</span>`;
+            logsContainer.appendChild(line);
+            logsContainer.scrollTop = logsContainer.scrollHeight;
+        }
+
+        async function fetchStatus() {
+            const res = await fetch('/api/status');
+            const data = await res.json();
+
+            const statusCont = document.getElementById('statusContainer');
+            const statusLabel = document.getElementById('statusLabel');
+
+            // Handle Status UI
+            statusCont.className = 'status-pill ' + data.status.toLowerCase();
+            statusLabel.innerText = data.status === 'Idle' ? 'SYSTEM IDLE' : data.status.toUpperCase();
+
+            // Append logs delicately
+            const currentLines = Array.from(logsContainer.querySelectorAll('.line-content')).map(el => el.innerText);
+            data.logs.forEach(msg => {
+                if (!currentLines.includes(msg)) {
+                    appendLog(msg);
+                }
+            });
+
+            // Handle waiting state
+            const waitMsgEl = document.getElementById('waitMsg');
+            if (data.waiting) {
+                waitMsgEl.style.display = 'block';
+                document.getElementById('promptText').innerText = data.prompt;
+                statusCont.className = 'status-pill running';
+                statusLabel.innerText = 'ACTION REQUIRED';
+            } else {
+                waitMsgEl.style.display = 'none';
+            }
+
+            // Button state
+            const runBtn = document.getElementById('runBtn');
+            if (data.status === 'Running' || data.waiting) {
+                runBtn.disabled = true;
+                runBtn.style.opacity = '0.5';
+            } else {
+                runBtn.disabled = false;
+                runBtn.style.opacity = '1';
+            }
+        }
+
+        async function runMonitoring() {
+            appendLog("Initializing pipeline call...");
+            await fetch('/api/run', { method: 'POST' });
+        }
+
+        async function uploadFile(inputId, target) {
+            const fileInput = document.getElementById(inputId);
+            if (!fileInput.files[0]) return alert('Please select a file first.');
+
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            formData.append('target', target);
+
+            const res = await fetch('/api/upload', { method: 'POST', body: formData });
+            const data = await res.json();
+            appendLog(`File System: ${data.message}`);
+        }
+
+        async function uploadAndResume() {
+            const fileInput = document.getElementById('manualUpload');
+            if (fileInput.files[0]) {
+                await uploadFile('manualUpload', 'SECOND_INPUT_CSV');
+            }
+            await fetch('/api/respond', { method: 'POST' });
+        }
+
+        async function loadConfig() {
+            const res = await fetch('/api/config');
+            currentConfig = await res.json();
+            document.getElementById('webhook').value = currentConfig.TEAMS_WEBHOOK_URL;
+            document.getElementById('delay').value = currentConfig.DELAY_MINUTES;
+            document.getElementById('notif').checked = currentConfig.ENABLE_NOTIFICATIONS;
+        }
+
+        async function saveConfig() {
+            currentConfig.DELAY_MINUTES = parseInt(document.getElementById('delay').value);
+            currentConfig.ENABLE_NOTIFICATIONS = document.getElementById('notif').checked;
+
+            await fetch('/api/config', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(currentConfig)
+            });
+            appendLog("System: Configuration updated successfully.");
+        }
+
+        setInterval(fetchStatus, 2000);
+        loadConfig();
+    </script>
+</body>
+
+</html>

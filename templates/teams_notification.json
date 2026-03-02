@@ -1,0 +1,52 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Exception Alert: ${status}",
+            "weight": "Bolder",
+            "size": "Medium",
+            "color": "${statusColor}"
+        },
+        {
+            "type": "FactSet",
+            "facts": [
+                {
+                    "title": "Exception Name:",
+                    "value": "${exceptionName}"
+                },
+                {
+                    "title": "Current Count:",
+                    "value": "${currentCount}"
+                },
+                {
+                    "title": "Baseline Count:",
+                    "value": "${baselineCount}"
+                },
+                {
+                    "title": "Category:",
+                    "value": "${category}"
+                },
+                {
+                    "title": "Timestamp:",
+                    "value": "${timestamp}"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Action: ${actionTaken}",
+            "isSubtle": true,
+            "wrap": true
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "View in Dynatrace",
+            "url": "https://dynatrace.example.com"
+        }
+    ]
+}

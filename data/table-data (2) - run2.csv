@@ -1,0 +1,89 @@
+exception,Count
+EMSG:License already present for user:XXXSTRACE:com.farmers.integ.security.community.ace.agent.license.AgentLicenseHelper.processAgentLicenseInfo(AgentLicenseHelper.gs:XXXSTRACERAW:-,110
+EMSG:error:entity.xxxUI-ValidationERRORMessagexxxSTRACE:com.farmers.integ.framework.job.automatejob.AutomatedJob.executeJob(AutomatedJob.gs:XXXSTRACERAW:-,85
+EMSG:SIMULATED_NEW_EXCEPTION: The system encountered an unexpected simulated error.STRACE:com.example.Simulation.trigger(Simulation.gs:XXX),5
+"EMSG:Could not find a policy with number: XXX that is effective on the given date: XXXXXXXXXSTRACE:is effective on the given date: XXXXXXXXX
+	at com.farmers.integ.framework.job.automatejob.AutomatedJob.initialize(AutomatedJob.gs:XXXSTRACERAW:-",33
+"EMSG:, AOR=XXXSTRACE:com.farmers.integ.downstream.util.DownstreamHelper.handleLuwStatusIssue(DownstreamHelper.gs:XXXSTRACERAW:-",30
+EMSG:-STRACE:-STRACERAW:com.guidewire.pl.cluster.internal.nbio.ClusterNbioSocketHandler.doRead(ClusterNbioSocketHandler.java:XXX,24
+EMSG:-STRACE:-STRACERAW:com.guidewire.pl.system.database.DatabaseChangedBeanWriter.createConcurrentDataChangeException(DatabaseChangedBeanWriter.java:XXX,24
+"EMSG:Database bean version conflict : XXXSTRACE:XXX/XXX/XXX XXX:XXX AM. Please cancel and retry your change.
+	at deployment.pc.war//com.guidewire.pl.system.database.DatabaseChangedBeanWriter.createConcurrentDataChangeException(DatabaseChangedBeanWriter.java:XXXSTRACERAW:-",20
+EMSG:-STRACE:-STRACERAW:com.farmers.edge.framework.exception.handler.imp.DefaultEdgeExceptionHandler.handleException(DefaultEdgeExceptionHandler.gs:XXX,14
+EMSG:-STRACE:-STRACERAW:com.guidewire.pl.system.transaction.ConnectionHandler.newDbException(ConnectionHandler.java:XXX,14
+EMSG:Mention period is cancelledSTRACE:com.farmers.integ.framework.job.automatejob.policychange.AutomatedPolicyChangeJobAPI.canStartJob(AutomatedPolicyChangeJobAPI.gs:XXXSTRACERAW:-,12
+EMSG:There is no Underwriting Company with input NAIC Code XXX in Policy CenterSTRACE:com.farmers.integ.security.community.ace.agent.license.AgentLicenseHelper.insertAgentLicenseInfo(AgentLicenseHelper.gs:XXXSTRACERAW:-,11
+EMSG:-STRACE:-STRACERAW:com.guidewire.pl.system.database.metadata.TableMetadataFactoryImpl.getTableMetadata(TableMetadataFactoryImpl.java:XXX,10
+EMSG:Mention period is cancelledSTRACE:com.farmers.integ.framework.job.automatejob.AutomatedJob.executeJob(AutomatedJob.gs:XXXSTRACERAW:-,10
+EMSG:ConcurrentDataChangeException XXXSTRACE:java.base/java.util.concurrent.FutureTask.report(FutureTask.java:XXXSTRACERAW:-,9
+"EMSG:'Unable to parse XML from xml string using schemas [com.farmers.integ.batch.mvrreport.inbound.xsd.mvrlnbatch] and schema root com.farmers.integ.batch.mvrreport.inbound.xsd.mvrlnbatch.Result at line XXX column XXX'STRACE:line XXX column XXX'
+	at deployment.pc.war//gw.xml.XmlElementInternalsImpl.parse(XmlElementInternalsImpl.java:XXXSTRACERAW:-",8
+EMSG:-STRACE:-STRACERAW:gwservices.pc.dm.gxmig.base.policy.PolicyPeriodPopulator.finish(PolicyPeriodPopulator.gs:XXX,8
+EMSG:Decision Tree Popup to DisplaySTRACE:gw.job.QuoteProcess.requestQuote(QuoteProcess.gs:XXXSTRACERAW:-,8
+EMSG:-STRACE:-STRACERAW:com.farmers.contingencies.helper.ContingencyUtil.getPDFResponseList(ContingencyUtil.gs:XXX,6
+EMSG:-STRACE:-STRACERAW:java.util.concurrent.FutureTask.report(FutureTask.java:XXX,6
+EMSG:PolicyPeriod:XXX = XXX/XXXSTRACE:deployment.pc.war//com.guidewire.pl.system.entity.proxy.EffDatedBranchProxy.checkBranchVersionMostRecent(EffDatedBranchProxy.java:XXXSTRACERAW:-,6
+EMSG:-STRACE:-STRACERAW:gw.lob.pa.PAPolicyLineMethods.postRateProcessing_Ext(PAPolicyLineMethods.gs:XXX,5
+"EMSG:, AOR=XXXSTRACE:deployment.pc.war//gw.internal.xml.gx.GxRuntime.createElement(GxRuntime.java:XXXSTRACERAW:-",4
+EMSG:-STRACE:-STRACERAW:com.farmers.config.ho.thirdparty.process.HOMortgageeProcess.displayMortgageServiceException(HOMortgageeProcess.gs:XXX,4
+EMSG:-STRACE:-STRACERAW:com.guidewire.pl.system.transaction.ConnectionHandler.executeDatabaseOperationForCloseConnection(ConnectionHandler.java:XXX,4
+EMSG:-STRACE:edge.validation.EdgeValidationContext.raiseExceptionIfProblemsFound(EdgeValidationContext.gs:XXXSTRACERAW:-,4
+EMSG:Answer the eligibility questions in order to validate the quote. If the questions have been answeredSTRACE:com.farmers.config.quoteandbind.validatequote.AbstractValidateQuoteHandler.validate(AbstractValidateQuoteHandler.gs:XXXSTRACERAW:-,4
+EMSG:Database bean version conflict : XXXSTRACE:com.farmers.integ.framework.job.automatejob.AutomatedJob.executeJob(AutomatedJob.gs:XXXSTRACERAW:-,4
+EMSG:There is no Underwriting Company with input NAIC Code XXX in Policy CenterSTRACE:com.farmers.integ.security.community.ace.agent.license.AgentLicenseHelper.updateAgentLicenseInfo(AgentLicenseHelper.gs:XXXSTRACERAW:-,4
+EMSG:-STRACE:-STRACERAW:com.farmers.config.quoteandbind.validatequote.AbstractValidateQuoteHandler.validate(AbstractValidateQuoteHandler.gs:XXX,3
+EMSG:-STRACE:-STRACERAW:com.guidewire.pl.system.entity.proxy.BeanProxy.checkIsInBundle(BeanProxy.java:XXX,3
+EMSG:-STRACE:-STRACERAW:gw.plugin.billing.impl.StandAloneBillingSystemPlugin.generatePreviewFor(StandAloneBillingSystemPlugin.gs:XXX,3
+EMSG:-STRACE:-STRACERAW:gwservices.pc.dm.gxmig.base.policy.PolicyPeriodPopulator.findEntity(PolicyPeriodPopulator.gs:XXX,3
+EMSG:-STRACE:com.farmers.config.quoteandbind.validatequote.AbstractValidateQuoteHandler.validate(AbstractValidateQuoteHandler.gs:XXXSTRACERAW:-,3
+EMSG:-STRACE:gw.job.QuoteProcess.requestQuote(QuoteProcess.gs:XXXSTRACERAW:-,3
+EMSG:Activity not found in system: XXXSTRACE:com.farmers.integ.serviceoperations.deeplaunch.servlets.DeepLaunchServlet.validateActivity(DeepLaunchServlet.gs:XXXSTRACERAW:-,3
+"EMSG:Database bean version conflict : XXXSTRACE:XXX/XXX/XXX XXX:XXX PM. Please cancel and retry your change.
+	at deployment.pc.war//com.guidewire.pl.system.database.DatabaseChangedBeanWriter.createConcurrentDataChangeException(DatabaseChangedBeanWriter.java:XXXSTRACERAW:-",3
+"EMSG:LUW Policy Change Job XXX: The object you are trying to update was XXXSTRACE:XXX/XXX/XXX XXX:XXX AM. Please cancel and retry your change.
+The object you are trying to update was 'Policy:pc:XXX - pc:XXX', and it was changed by System at XXX/XXX/XXX XXX:XXX AM. Please cancel and retry your change.
+	at gw.acc.luw.LUWExceptionHelper.processUserDisplayableException(LUWExceptionHelper.gs:XXXSTRACERAW:-",3
+EMSG:You cannot change a locked branchSTRACE:deployment.pc.war//com.guidewire.pl.system.entity.proxy.EffDatedBranchProxy.handleBranchChange(EffDatedBranchProxy.java:XXXSTRACERAW:-,3
+EMSG:-STRACE:-STRACERAW:com.farmers.config.pa.validator.BrightlineValidator.validateQuoteBrightlineRules(BrightlineValidator.gs:XXX,2
+EMSG:-STRACE:-STRACERAW:com.guidewire.pl.system.workqueue.DistributedWorkerControllerImpl.extractExceptionPropertyLength(DistributedWorkerControllerImpl.java:XXX,2
+EMSG:-STRACE:-STRACERAW:com.guidewire.pl.system.workqueue.DistributedWorkerControllerImpl.setExceptionOnWorkItem(DistributedWorkerControllerImpl.java:XXX,2
+EMSG:-STRACE:-STRACERAW:gw.job.JobConditions.assertOkay(JobConditions.gs:XXX,2
+EMSG:-STRACE:com.farmers.integ.downstream.policytransaction.PolicyTransaction.updateTransactionOOS(PolicyTransaction.gs:XXXSTRACERAW:-,2
+EMSG:-STRACE:gw.job.JobConditions.assertOkay(JobConditions.gs:XXXSTRACERAW:-,2
+EMSG:-STRACE:org.jboss.as.naming@XXX.XXX.XXX.GA-redhatXXX//org.jboss.as.naming.InitialContext.getURLScheme(InitialContext.java:XXXSTRACERAW:-,2
+"EMSG:A report shows that the XXXSTRACE:the  XXX NISSAN VERSA XXXD XXX.XXX S has been flagged as having Vehicle History activity.
+	at edge.capabilities.quote.submission.quoting.util.SubmissionUnderwritingIssuesUtil.checkSideBySideProcessExceptions(SubmissionUnderwritingIssuesUtil.gs:XXXSTRACERAW:-",2
+EMSG:Accident Forgiveness coverage cannot be added to this quote. Please remove it and re-rateSTRACE:edge.capabilities.policycommon.coverage.util.CoverageUtil.updateFrom XXXSTRACERAW:-,2
+EMSG:EntityValidationExceptionSTRACE:edge.capabilities.quote.submission.quoting.util.SubmissionUnderwritingIssuesUtil.checkSideBySideProcessExceptions(SubmissionUnderwritingIssuesUtil.gs:XXXSTRACERAW:-,2
+EMSG:Exclude the Driver XXXSTRACE:edge.capabilities.quote.submission.quoting.util.SubmissionUnderwritingIssuesUtil.checkSideBySideProcessExceptions(SubmissionUnderwritingIssuesUtil.gs:XXXSTRACERAW:-,2
+"EMSG:For input string: ""XXX""STRACE:java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:XXXSTRACERAW:-",2
+EMSG:LHPI Ordering Failed! - [Value required.STRACE:java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstanceXXX(Native MethodSTRACERAW:-,2
+EMSG:Policy is ineligible for Farmers Auto.STRACE:edge.capabilities.quote.submission.quoting.util.SubmissionUnderwritingIssuesUtil.checkSideBySideProcessExceptions(SubmissionUnderwritingIssuesUtil.gs:XXXSTRACERAW:-,2
+EMSG:Policy is ineligible for Farmers Auto.STRACE:gw.lob.pa.PAPolicyLineMethods.postRateProcessing_Ext(PAPolicyLineMethods.gs:XXXSTRACERAW:-,2
+EMSG:Validate mortgagee information and retry.  Mortgagee code creation was not successful.STRACE:com.farmers.config.ho.thirdparty.process.HOMortgageeProcess.displayMortgageServiceException(HOMortgageeProcess.gs:XXXSTRACERAW:-,2
+"EMSG:, AOR=XXXSTRACE:com.farmers.config.ho.dwelling.location.process.HOLocationProcess.getPPCDetails(HOLocationProcess.gs:XXXSTRACERAW:-",1
+"EMSG:, AOR=XXXSTRACE:com.farmers.config.ho.productmodel.enhancements.Dwelling_HOEEnhancement.valCADeductables(Dwelling_HOEEnhancement.gsx:XXXSTRACERAW:-",1
+"EMSG:, AOR=XXXSTRACE:gw.lob.pa.PAPolicyLineMethods.postRateProcessing_Ext(PAPolicyLineMethods.gs:XXXSTRACERAW:-",1
+EMSG:-STRACE:-STRACERAW:com.farmers.integ.serviceoperations.deeplaunch.servlets.util.PolicySearchHelper.policySearch(PolicySearchHelper.gs:XXX,1
+EMSG:-STRACE:-STRACERAW:deployment.pc.war//com.guidewire.pl.metadata.datatypeXXX.fieldvalidator.FieldValidatorInfo.validateFormat(FieldValidatorInfo.java:XXX,1
+EMSG:-STRACE:-STRACERAW:deployment.pc.war//com.guidewire.pl.system.database.entitywriter.TableWriterImpl.throwDBDuplicateKeyException(TableWriterImpl.java:XXX,1
+EMSG:-STRACE:-STRACERAW:gw.job.QuoteProcess.requestQuote(QuoteProcess.gs:XXX,1
+EMSG:-STRACE:-STRACERAW:gw.rating.flow.domain.CalcRoutine.executeRoutine(CalcRoutine.gs:XXX,1
+EMSG:-STRACE:-STRACERAW:gwservices.pc.dm.api.FarmersPolicyRenewalOverride.startConversionRenewalWithBasedOn(FarmersPolicyRenewalOverride.gs:XXX,1
+"EMSG:-STRACE:-STRACERAW:must be a combined limit (XXX-digit max, i.e XXX",1
+EMSG:-STRACE:com.farmers.integ.security.community.ace.agent.profile.utils.AgentProfileBatchHelper.getUserByUPN(AgentProfileBatchHelper.gs:XXXSTRACERAW:-,1
+EMSG:-STRACE:gw.lob.pa.PAPolicyLineMethods.postRateProcessing_Ext(PAPolicyLineMethods.gs:XXXSTRACERAW:-,1
+EMSG:Exception Occured while processing the updateEsignDocumentContingency Documents. Please check individual Document StatusSTRACE:com.farmers.integ.documentmgmt.updatetrigger.UpdateEsignTriggerHelper.processUpdateEsignDocumentContingency(UpdateEsignTriggerHelper.gs:XXXSTRACERAW:-,1
+EMSG:Expiration date cannot be before effective dateSTRACE:deployment.pc.war//com.guidewire.pl.system.entity.proxy.EffDatedBranchProxy.setPeriodWindow(EffDatedBranchProxy.java:XXXSTRACERAW:-,1
+EMSG:Failed to close the connectionSTRACE:deployment.pc.war//com.guidewire.pl.system.transaction.ConnectionHandler.executeDatabaseOperationForCloseConnection(ConnectionHandler.java:XXXSTRACERAW:-,1
+"EMSG:LUW Policy Change Job XXX: The object you are trying to update was XXXSTRACE:XXX/XXX/XXX XXX:XXX AM. Please cancel and retry your change.
+The object you are trying to update was 'Policy:pc:XXX - pc:XXX', and it was changed by System at XXX/XXX/XXX XXX:XXX AM. Please cancel and retry your change.
+	at com.farmers.integ.framework.job.automatejob.AutomatedJob.executeJob(AutomatedJob.gs:XXXSTRACERAW:-",1
+EMSG:Policy is ineligible for Farmers Auto due to driver(s) with unacceptable license status.STRACE:com.farmers.config.pa.validator.BrightlineValidator.validateQuoteBrightlineRules(BrightlineValidator.gs:XXXSTRACERAW:-,1
+EMSG:Policy is ineligible for Farmers Auto due to driver(s) with unacceptable license status.STRACE:gw.job.QuoteProcess.requestQuote(QuoteProcess.gs:XXXSTRACERAW:-,1
+EMSG:Policy not found in system:nullSTRACE:com.farmers.integ.serviceoperations.deeplaunch.servlets.DeepLaunchServlet.validatePolicyNumber(DeepLaunchServlet.gs:XXXSTRACERAW:-,1
+EMSG:The object you are trying to update was XXXSTRACE:edge.capabilities.quote.submission.GatewayQuoteHandler.handleOrThrowException(GatewayQuoteHandler.gs:XXXSTRACERAW:-,1
+"EMSG:The value ""GABRIELA TRUJILLOSTRACE:deployment.pc.war//gw.datatype.impl.StringConstraintsHandlerBase.validateStringLength(StringConstraintsHandlerBase.java:XXXSTRACERAW:-",1
+EMSG:XXX has exceeded the accident and/or violation threshold for eligibility in this program.STRACE:com.farmers.config.pa.validator.BrightlineValidator.validateQuoteBrightlineRules(BrightlineValidator.gs:XXXSTRACERAW:-,1
+EMSG:XXX has exceeded the accident and/or violation threshold for eligibility in this program.STRACE:gw.job.QuoteProcess.requestQuote(QuoteProcess.gs:XXXSTRACERAW:-,1
+EMSG:You cannot change a locked branchSTRACE:com.farmers.integ.framework.job.automatejob.AutomatedJob.executeJob(AutomatedJob.gs:XXXSTRACERAW:-,1

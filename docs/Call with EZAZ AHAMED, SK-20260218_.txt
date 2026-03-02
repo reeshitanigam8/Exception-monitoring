@@ -1,0 +1,262 @@
+Call with EZAZ AHAMED, SK-20260218_180551-Meeting 
+Recording 
+18 February 2026, 12:35pm 
+10m 9s 
+Shanmuga Srikanth, M.S.S. Srikanth started transcription 
+Shanmuga Srikanth, M.S.S. Srikanth   0:03 
+In the meeting and I had like some four questions. So first I'll explain like what I 
+understood. You can correct me if I'm saying anything wrong. 
+0:04 
+Yes. 
+EZAZ AHAMED, SK   0:13 
+Yes, yes. 
+Yeah. 
+Shanmuga Srikanth, M.S.S. Srikanth   0:15 
+OK, so first we'll we'll need to open Dynatrace and in that we need to open 
+notebook. In notebook we need to open exception monitoring and in that we have a 
+query. We need to run that query. After running that query we'll get some exceptions 
+records. 
+EZAZ AHAMED, SK   0:23 
+Yes. 
+Yes. 
+Shanmuga Srikanth, M.S.S. Srikanth   0:30 
+So we should download these exceptions records as CSV. 
+EZAZ AHAMED, SK   0:30 
+Yes, and. 
+Uh, so you can do one thing one week. Uh, there was uh nothing like uh exception 
+monitoring. I have created that for mine. 
+Shanmuga Srikanth, M.S.S. Srikanth   0:35 
+Hmm. 
+OK. 
+EZAZ AHAMED, SK   0:46 
+So there was the release monitoring was there. There we'll get that exception 
+monitoring code. 
+Shanmuga Srikanth, M.S.S. Srikanth   0:55 
+Mm-hmm. So this thing will look differently in a different people's like a Dynatrace 
+interface. Is that what you mean ASUS? 
+EZAZ AHAMED, SK   0:57 
+OK, so. 
+Yeah, I'm showing you. 
+Shanmuga Srikanth, M.S.S. Srikanth   1:08 
+OK. 
+EZAZ AHAMED, SK   1:16 
+Is. 
+It's visible, right? 
+Shanmuga Srikanth, M.S.S. Srikanth   1:20 
+Yes. 
+EZAZ AHAMED, SK   1:21 
+Notebook. 
+Shanmuga Srikanth, M.S.S. Srikanth   1:24 
+Notebook. 
+EZAZ AHAMED, SK   1:27 
+Who's ever who wants they will. They can create their own notebook like them. This 
+one is for all release monitoring. 
+Shanmuga Srikanth, M.S.S. Srikanth   1:33 
+OK, uh huh. 
+Release monitoring is for everyone, OK? 
+EZAZ AHAMED, SK   1:39 
+Yes, from here we'll get the exception code. This one is exception code. We need to 
+extract from here. Then we'll follow the same thing we discussed tomorrow 
+yesterday. 
+Shanmuga Srikanth, M.S.S. Srikanth   1:43 
+OK, OK. OK. 
+Yesterday, OK. Is there any special reason why you have also created a exception 
+monitoring Vesas? 
+EZAZ AHAMED, SK   2:03 
+Yeah. 
+Yes, for uh after extraction we. 
+Shanmuga Srikanth, M.S.S. Srikanth   2:08 
+Mhm. 
+EZAZ AHAMED, SK   2:10 
+We need to check that that was the new or not like yesterday I told you that that that 
+is the query for that. I am fetching that that this one is new or old. I think there was 
+also this code will be. 
+Shanmuga Srikanth, M.S.S. Srikanth   2:15 
+Yes, OK. Uh huh. 
+Yes. 
+Uh. 
+OK. 
+OK. 
+EZAZ AHAMED, SK   2:30 
+You there? 
+Shanmuga Srikanth, M.S.S. Srikanth   2:31 
+Mhm. 
+EZAZ AHAMED, SK   2:34 
+Let me check which one is this. 
+Shanmuga Srikanth, M.S.S. Srikanth   2:48 
+So here we have multiple queries, whereas in exception monitoring we have only one 
+particular query. 
+EZAZ AHAMED, SK   2:50 
+Yeah, this one. 
+Yeah, this one from here we can check in. We need to give that. After that we'll. 
+Shanmuga Srikanth, M.S.S. Srikanth   2:57 
+OK. 
+Mhm. 
+Yes. Uh, OK, so of. 
+EZAZ AHAMED, SK   3:07 
+And deal is monitoring was also there the exception. 
+Shanmuga Srikanth, M.S.S. Srikanth   3:11 
+Uh, yes. 
+So we need to execute this and then we'll get the CSV file. We'll need to download 
+the CSV file and we need to copy the content and paste it in the baseline sheet. So 
+after pasting, we'll need to check the category column. 
+EZAZ AHAMED, SK   3:25 
+Yes. 
+Shanmuga Srikanth, M.S.S. Srikanth   3:30 
+If there are any new and elevated values, so after yeah until here like I understood 
+then we need to check like for example if there is anything new we need to like share 
+it with the L2 team and if there is any elevated we need to find out the count. Is is 
+this point correct? 
+EZAZ AHAMED, SK   3:50 
+No, not only to team. There was a group there. I we have to inform that this 
+exception we got, this exception is new for us. So they will confirm and after that 
+they will work on that exception. 
+Shanmuga Srikanth, M.S.S. Srikanth   3:53 
+OK. 
+OK. 
+OK. 
+So we need to share it with a group like how do they share it as as like in teams or 
+we need to do some mail stuff. 
+EZAZ AHAMED, SK   4:08 
+100. 
+Pink teams. 
+Shanmuga Srikanth, M.S.S. Srikanth   4:16 
+In Teams chat, OK, we need to share a message in Teams, send an alert in Teams, OK. 
+EZAZ AHAMED, SK   4:17 
+Yes. 
+Yeah, yes. 
+Shanmuga Srikanth, M.S.S. Srikanth   4:23 
+And uh, OK and what we need to do for elevated values? 
+EZAZ AHAMED, SK   4:27 
+If there was count was high then that should be also informed to that team in the 
+teams. 
+Shanmuga Srikanth, M.S.S. Srikanth   4:31 
+Huh. 
+OK. 
+OK, so in next today's recording I saw like for two of the elevated things, one is 11 
+was saying 800 and 900 and in two plus it was 1800 or something like that I guess. 
+And for the other thing it was like 246 and in one place it was like 8 the value. 
+EZAZ AHAMED, SK   4:46 
+Yes. 
+Yes. 
+Shanmuga Srikanth, M.S.S. Srikanth   4:59 
+So like how do we calculate if a value is elevated or not? 
+EZAZ AHAMED, SK   4:59 
+Yes. 
+Do we get yesterday that much of count like 800 and 1800 that was not that was not 
+on yesterday, right? That was the before day before yesterday or? 
+Shanmuga Srikanth, M.S.S. Srikanth   5:09 
+Oh yeah, I I. 
+OK, before. 
+EZAZ AHAMED, SK   5:19 
+I think that was on that was, yes, few days ago. That's why. If the count count was 
+high, then we need to inform that the that count was increasing. We need to follow 
+that till half an hour. If it was increasing then we need to inform that. 
+Shanmuga Srikanth, M.S.S. Srikanth   5:21 
+Few days before that, uh. 
+Uh, OK. 
+OK, mhm. 
+EZAZ AHAMED, SK   5:41 
+If if increasing then. 
+Shanmuga Srikanth, M.S.S. Srikanth   5:44 
+OK, OK. For half an hour we need to check in. We should see if it is still increasing, 
+then we should share it with the team. 
+EZAZ AHAMED, SK   5:51 
+Yes. 
+Shanmuga Srikanth, M.S.S. Srikanth   5:54 
+So OK, I had this thought like how do we get the baseline sheet? Like it is like 
+automatically as if a formula is applied, the previous value, the category, all of them 
+are getting filled, right? I mean they're being updated. So how does that happen? 
+EZAZ AHAMED, SK   6:08 
+Yes. 
+Which one you are training? 
+Shanmuga Srikanth, M.S.S. Srikanth   6:13 
+The baseline Excel sheet in which we copy in which we pasted the values. 
+EZAZ AHAMED, SK   6:15 
+Yeah, basically. 
+Yes, we are creating that one. 
+Shanmuga Srikanth, M.S.S. Srikanth   6:21 
+Yes, before pasting the values, the three columns. What are the three columns? I 
+wrote the names last week, average category and review comments. Those three 
+were like blank or they're having some different values and when we pasted the 
+values which we have downloaded, which we have copied them from the download. 
+CSV then they are being updated the last week average category and review 
+comments. So is there any formula that is being uh? 
+EZAZ AHAMED, SK   6:44 
+Yes. 
+In not in, yeah, we need to paste in the current session. 
+Right, we need to extract that and we need to paste that in current. 
+Shanmuga Srikanth, M.S.S. Srikanth   6:56 
+OK, mm. 
+OK. 
+EZAZ AHAMED, SK   7:02 
+There was a few categories there except few tabs are there like exception, count, last 
+week, average category and review comment. 
+Shanmuga Srikanth, M.S.S. Srikanth   7:10 
+Mhm. 
+OK. 
+EZAZ AHAMED, SK   7:17 
+We need to check only that except and count that that was new or elevated or old. 
+Shanmuga Srikanth, M.S.S. Srikanth   7:28 
+OK, got it. And then one more question. So as of now, like how regularly or how 
+often are you guys running that query? Like for how much? What is the time interval? 
+In Dinatrace. 
+EZAZ AHAMED, SK   7:46 
+In. 
+Whenever we have any deployment that at that time we are uh doing for every 30 
+minutes. 
+Shanmuga Srikanth, M.S.S. Srikanth   7:55 
+OK, OK. For when, when not there is a deployment, you do it for every 30 minutes 
+and when there is no deployment, you will do once every day. 
+EZAZ AHAMED, SK   8:03 
+No, not once every day. Everyone, every one hour. 
+Shanmuga Srikanth, M.S.S. Srikanth   8:05 
+Oh. 
+Everyone or OK, got it. Uh, OK. 
+EZAZ AHAMED, SK   8:10 
+One one hour whenever we needed. If we see that there was a spike, then we need 
+to do that in one hour or two hour. 
+Shanmuga Srikanth, M.S.S. Srikanth   8:20 
+OK. 
+And then So what is the part which we are supposed to automate exactly? Like from 
+my understanding we should maybe we need to update, not update, we need to 
+automate from running the query. 
+Downloading the Excel sheet, copying those values and then pasting them in the 
+baseline sheet and also seeing what are the new values, what are the elevated values 
+and we need to compare the values and if it is elevated we need to run it once again 
+after 30 minutes and then we need to see if it is still increasing and then we need to 
+send an alert. 
+On teams, if it is a new then we need to send electron teams to the L2 team or some 
+other team, all of those groups. So is this the part we are supposed to talk with or is 
+there anything else also? 
+EZAZ AHAMED, SK   9:00 
+Yes. 
+Yes. 
+Yes, yes, yes. No, this is the part only. 
+Shanmuga Srikanth, M.S.S. Srikanth   9:13 
+OK, so I just like I explained what are I understood right? So is my understanding like 
+correct and lent or is there any mistake anywhere which you would like to rectify? 
+EZAZ AHAMED, SK   9:20 
+Is. 
+Yeah. 
+No, no, no, no. You're the understanding is correct. Absolutely correct. 
+Shanmuga Srikanth, M.S.S. Srikanth   9:30 
+OK, OK. So so these are the dots I had and yeah I I asked Hrithik about the Dinotrace 
+platform access and all of that. He said he will contact me a few time afterwards after 
+some time. So and would you like to add anything before like this is these are the 
+dots I had and. 
+Have answered everyone. So yeah, before we come to the call, would you like to add 
+anything? 
+EZAZ AHAMED, SK   9:51 
+Yes. 
+No, nothing. We have. We have cleared everything. 
+Shanmuga Srikanth, M.S.S. Srikanth   9:55 
+OK. OK. Thank you, Isa. So if I have any more doubts, I'll contact you again. 
+Contact you again. 
+EZAZ AHAMED, SK   10:02 
+Sure, sure, sure, sure you can. 
+Shanmuga Srikanth, M.S.S. Srikanth   10:05 
+OK. Thank you, Isas. 
+EZAZ AHAMED, SK   10:06 
+Thank you. Thank you. 
+Shanmuga Srikanth, M.S.S. Srikanth stopped transcription 
